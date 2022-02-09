@@ -39,4 +39,5 @@ parser.print_help()
 
 #print error
 parser.error("say somrthing")
+#and you can inherit OptionParser and override exit() and erro()
 

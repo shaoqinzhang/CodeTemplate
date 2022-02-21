@@ -6,3 +6,6 @@ adb nodaemon server
 + getprop
 + setprop
 + watchprops
+
+dumpsys activity
+

@@ -83,6 +83,29 @@ $ and | will judge all condition.
 
 # [Difference between HashMap, LinkedHashMap and TreeMap](https://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap)
 
+# [New Integer vs valueOf](https://stackoverflow.com/questions/2974561/new-integer-vs-valueof)
+
+Integer.valueOf() -128~127 will return from IntegerCache
+
+# [Performance considerations for keySet() and entrySet() of Map](https://stackoverflow.com/questions/3870064/performance-considerations-for-keyset-and-entryset-of-map)
+
+above 10000, entrySet > keySet, especially TreeMap
+# [java.io.InputStream()](https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html)
+ + ```long skip(long n)```: if n is negative, no bytes are skipped
+
+# [static initialization code vs instance initialization code](https://stackoverflow.com/questions/335311/what-is-the-difference-between-a-static-and-a-non-static-initialization-code-blo)
+
+# StringBuilder
+
+StringBuilder run faster in a single tread than others.
+
+specific capacity will improve 45%
+
+
+
+
+
+
 
 
 

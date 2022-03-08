@@ -5,3 +5,24 @@ sort function in #include<algorithm>
 sort(start,end)
 sort(start,end,compare), compare is a bool function
 
+# memory
+
++ static local var
++ static global var
++ dynamic local var ->out of memory
++ dynamic global var
+
+# [include file order](https://stackoverflow.com/questions/2762568/c-c-include-header-file-order)
+
+> + The prototype/interface header for this implementation (ie, the .h/.hh file that corresponds to this .cpp/.cc file).
+> + Other headers from the same project, as needed.
+> + Headers from other non-standard, non-system libraries (for example, Qt, Eigen, etc).
+> + Headers from other "almost-standard" libraries (for example, Boost)
+> + Standard C++ headers (for example, iostream, functional, etc.)
+> + Standard C headers (for example, cstdint, dirent.h, etc.)
+
+# static global var vs static local var
+
+global var in single c file -> static global
+
+global var in single function -> static local

@@ -26,3 +26,18 @@ sort(start,end,compare), compare is a bool function
 global var in single c file -> static global
 
 global var in single function -> static local
+
+# reentrant
+
+pay attention to dynamic global, static local and static global
+
+# the benefit of inline function
+
+type check, no function call
+
+# [off by one error](https://stackoverflow.com/questions/2939869/what-is-an-off-by-one-error-and-how-do-i-fix-it)
+
+# [Difference between private, public, and protected inheritance](https://stackoverflow.com/questions/860339/difference-between-private-public-and-protected-inheritance/1372858#1372858)
+
+
+

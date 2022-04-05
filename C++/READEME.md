@@ -39,5 +39,24 @@ type check, no function call
 
 # [Difference between private, public, and protected inheritance](https://stackoverflow.com/questions/860339/difference-between-private-public-and-protected-inheritance/1372858#1372858)
 
+# override and overload
+
+ override between class with the same signature method.
+
+ overload in a single class with different parameters
+
+ # final and override
+
+ C++11
+
+ # inline
+
+ The same function definition decorated with the inline keyword can appear in multiple translation units at the same time
+ 
+# int* p[] and int (*p)[]
+
+# float epsilon
+
+e-5
 
 

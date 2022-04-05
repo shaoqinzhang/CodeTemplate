@@ -101,6 +101,57 @@ StringBuilder run faster in a single tread than others.
 
 specific capacity will improve 45%
 
+# BigDecimal
+
+compareTo: inefficiently
+
+equals: this method considers two objects equal only if they are equal in value and scale 
+
+
+
+# [immutable class](https://stackoverflow.com/questions/3162665/immutable-class)
+
+with private final member and no setter and no getter
+
+# SecurityManager
+
+```SecurityManager securityManager = System.getSecurityManager();```
+
+# break label
+
+break the label code block and continue to run other code
+
+#Switch type
+
+char, byte, int,  short, Character, Byte, Short, Integer, String. except for boolean and long
+
+Java 7 support java.lang.String
+
+**wrap type can not be placed behind case**
+
+#Interface and Abstract Class
+
+A class can implements multiple Interfaces 
+
+# protected and default 
+
+default access modifier is more restrictive than the protected access modifier
+
+access-modifier must be less restrictive than the one in parent
+
+protected access modifier is visible to classes in the same package , sub-classes and sub-classes of  different package.
+
+
+default acess modifier is visible to classes in the same package and sub-classes in the same package
+https://stackoverflow.com/questions/47412049/protected-and-default-modifier-java
+
+https://stackoverflow.com/questions/9035052/cannot-reduce-visibility-of-method-inherited-method-from-parent
+
+https://stackoverflow.com/questions/6851612/when-overriding-a-method-why-can-i-increase-access-but-not-decrease-it
+
+#Interface Default Method  
+java8  
+
 
 
 

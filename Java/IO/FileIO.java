@@ -19,7 +19,6 @@ public class FileIO {
                 e.printStackTrace();
             }
         }
-
         //java7
         //implement closeable class can be put in try()catch without finally
         try (OutputStream newOut = new FileOutputStream("");
@@ -28,6 +27,5 @@ public class FileIO {
             e.printStackTrace();
         }
     }
-
 
 }

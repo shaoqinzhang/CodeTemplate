@@ -59,4 +59,27 @@ type check, no function call
 
 e-5
 
+# Gtest
+
+INSTANTIATE_TEST_CASE_P ...
+
+# Lvalue Reference and Rvalue Reference ...
+
+https://msdn.microsoft.com/en-us/library/f90831hc.aspx
+
+# Pure virtual function
+ 
+ parent point can call child function
+
+ # override
+
+ # pthread
+
+ 
+
+
+
+
+
+
 

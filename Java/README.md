@@ -38,6 +38,10 @@ recommend to use Calender.DECEMBER
 
 SerialVersionUID must be static, final and long type
 
+private writeObject and readObject
+
+transient: ignore member
+
 # [pass-by-reference or pass-by-value](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value/40523#40523)
 
 # [how to define a hashcode](https://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java)
@@ -149,8 +153,42 @@ https://stackoverflow.com/questions/9035052/cannot-reduce-visibility-of-method-i
 
 https://stackoverflow.com/questions/6851612/when-overriding-a-method-why-can-i-increase-access-but-not-decrease-it
 
-#Interface Default Method  
+# Interface Default Method  
 java8  
+if a class implements multiple interface with the same default method. The compiler will throw error because compiler can't figure out which method need to be called.  
+
+if a class extend class and implement interface with then same default method. The compiler will don't throw error, because the compiler will first use parent default method.  
+
+
+# Functional Interface 
+java.util.function
+
+Consumer<T>  
+Function<T,R>  
+Supplier<T>  
+Predicate<T>  
+
+# clonable
+
+implements Cloneable  
+protected Object clone() throws CloneNotSupportedException
+
+# finalize
+
+normally it should be overridden to clean-up non-Java resources ie closing a file 
+finalize() is never run more than once on any object  
+It may take **more than one GC cycle** before the GC determines that a specific object is unreachable. (Java GCs are typically "generational" collectors ...) 
+
+# foreach
+remove and modify item are not good. Traversing multiple sets in parallel is not good.  
+
+# weak reference and strong reference
+
+# annotation
+
+Target, Filed, Constructor, Method
+
+# FileNotFoundException
 
 
 

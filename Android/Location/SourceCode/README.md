@@ -191,7 +191,37 @@ OS use ILocationProvider.aidl to corp with NLP apk service.
             }
         });
     }
+// LocationManagerService.java
+// use reportLocation to upload location to app
+    public void reportLocation(Location location, boolean passive) {
+        checkCallerIsProvider();
+
+        if (!location.isComplete()) {
+            Log.w(TAG, "Dropping incomplete location: " + location);
+            return;
+        }
+
+        mLocationHandler.removeMessages(MSG_LOCATION_CHANGED, location);
+        Message m = Message.obtain(mLocationHandler, MSG_LOCATION_CHANGED, location);
+        m.arg1 = (passive ? 1 : 0);
+        mLocationHandler.sendMessageAtFrontOfQueue(m);
+    }
+
 ```
+
+ 
+
+UpdatRecod class consist of LocationRequst, Receiver and so on.
+
+Receiver class include listener, worksource and so on. Receriver will listen if client release or unbind.
+
+ProviderRequest consist of all client LocationRequest. Variable reportLocaton is default false which show Provider is off.
+
+
+
+
+
+
 
 
 

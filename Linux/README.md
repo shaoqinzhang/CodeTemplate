@@ -40,3 +40,9 @@ chain:
 rule:
 + -d -s -dport -sport
   
+# Regular
+
+[^A-Za-z-0-9_] = \W
+
+# ag and grep
+

@@ -5,3 +5,5 @@
 + close resource
 
 # PreparedStatement and Statement
+
+# setAutoCommit

@@ -61,6 +61,7 @@ defaultconfig:
 + versionCode: the max num is 2100000000. it control low version app can't be install
 + versionName
   
+
 productFlavors:
 + demo
 + full
@@ -91,7 +92,7 @@ broadcast time out: 10 and 60s
 service time out 20s
 
 # Futex
- 
+
  Fast UserSpace NuTexes
 
 # Android Runtime JIT
@@ -117,4 +118,14 @@ Context.MODE_PRIVATE
 # jobschedule
 
 # provider 
+
+# Android 12 Privacy dashboard
+
+# jadx
+
+# jeb
+
+# cgrep|sgrep|croot|resgrep|jgrep
+
+
 

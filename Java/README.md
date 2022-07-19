@@ -42,6 +42,24 @@ private writeObject and readObject
 
 transient: ignore member
 
+ObjectStreamField
+
+# tricks
+
+HashMap can put null key and null value
+
+HashTable and TreeMap can not put null key and null value
+
+default length of  ArrayList is 0 (```DEFAULT_INITIAL_CAPACITY```)
+
+defailt of HashMap, HashSet and StringBuffer is 16
+
+
+
+
+
+
+
 # [pass-by-reference or pass-by-value](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value/40523#40523)
 
 # [how to define a hashcode](https://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java)
@@ -121,19 +139,24 @@ with private final member and no setter and no getter
 
 ```SecurityManager securityManager = System.getSecurityManager();```
 
+default policy path is ${java.home}/lib/security/java.policy
+
+java -Djava.security.policy= to set user policy path
+
+
 # break label
 
 break the label code block and continue to run other code
 
-#Switch type
+# Switch type
 
-char, byte, int,  short, Character, Byte, Short, Integer, String. except for boolean and long
+char, byte, int,  short, Character, Byte, Short, Integer, enum, String. except for boolean, long, unsigned int
 
 Java 7 support java.lang.String
 
 **wrap type can not be placed behind case**
 
-#Interface and Abstract Class
+# Interface and Abstract Class
 
 A class can implements multiple Interfaces 
 
@@ -145,13 +168,22 @@ access-modifier must be less restrictive than the one in parent
 
 protected access modifier is visible to classes in the same package , sub-classes and sub-classes of  different package.
 
-
 default acess modifier is visible to classes in the same package and sub-classes in the same package
 https://stackoverflow.com/questions/47412049/protected-and-default-modifier-java
 
 https://stackoverflow.com/questions/9035052/cannot-reduce-visibility-of-method-inherited-method-from-parent
 
 https://stackoverflow.com/questions/6851612/when-overriding-a-method-why-can-i-increase-access-but-not-decrease-it
+
+
+
+**private method of superclass cannot be hiding.  Properties， static method  and inner class can be hiden.**
+
+
+
+
+
+
 
 # Interface Default Method  
 java8  
@@ -190,18 +222,123 @@ Target, Filed, Constructor, Method
 
 # FileNotFoundException
 
+can see the file system structure
+
+# ArrayIndexOutBoundsException
+
+divide 0
+
+# Runtime, Process, ProcessBuilder
+
+# SecureRandom 
+
+```java
+byte[] values = new byte[128];
+SecureRandom random = new SecureRandom();
+random.nextBytes(values);
+```
+
+# jmap, jstackm, jstat, jinfo javac
+
+jmap -histo  
+jstat gcutil  
+javac -source 5/6/7/8  
+
+# jvm server and client
+
+java -version
+
+# parameter
+
+-XX:MetaspaceSize   
+MaxMetaSpacSize  
+Xms  
+-XX:ThradStackSize
+
+# Junit
 
 
 
 
 
+# Synchronize
+
+
+
+Hashtable and Ventor are synchronize.
+
+TreeSet and LinkedList  are not synchronize.
 
 
 
 
 
+# DOS attach
 
- 
+javax.nameing.InsufficientResourcesException
+
+java.lang.OutofMemoryerror
+
+java.lang.StackOverFlowError
 
 
- 
+
+# System.exit()
+
+
+
+# interface
+
+public static final var
+
+public abstract method
+
+default method? use reflection to verify this.
+
+ # opton
+
+deal with nullpoint
+
+
+
+# assertion
+
+begin with 1.4
+
+Add option to open assertion ```-enableassertions``` or ```-ea```. Close option is ```--disableassertion``` or ```-da```
+
+assertion is closed by default, so do not use assertion in predicate logic.
+
+eg,
+
++ assert <bool expression>; 
+
++ assert <bool expression> : <message>; 
+
+  
+
+# Build the jdk source code
+
+reference https://openjdk.java.net/groups/build/doc/building.html
+
+
+
+If you need proper JDK version, you can download them from https://jdk.java.net/18/ and copy them to /usr/lib/jvm/
+
+In my Ubuntu OS , I need below softwares to finish "bash configure"
+
+sudo apt-get install libasound2-dev autoconf libcups2-dev libfontconfig1-dev libx11-dev libxext-dev libxrender-dev libxrandr-dev libxtst-dev libxt-dev
+
+
+
+![image-20220522164958266](img/image-20220522164958266.png)
+
+# Note of "Java Cookbook"
+
+code url:
+
++ http://github.com/IanDarwin/javasrc 
++ http://github.com/Iandarwin/darwinsys-api
++ http://github.com/IanDarwin/javasrcee
++ 
++ 

@@ -2,5 +2,5 @@
 
 # Hibernate
 
-cache
+no cache
 

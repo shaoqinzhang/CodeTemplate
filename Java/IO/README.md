@@ -13,3 +13,32 @@ class implements java.lang.AutoClosed or java.io.Closable  can use try-with-reso
 public FileOutputStream(String name, boolean append)
 
 # NIO Selector
+
+# FileReader
+
+# File
+
+getPath(): get the constructor path parameter, eg. .\test.txt
+getCanonicalPath: eg. E:\workspace\java\test.txt
+getAbsolutePath: eg. E:\workspace\..\java\test.txt
+
+# newByteChannel
+
+# ZipInputStream
+
+ZipEntry.getSize()
+
+# IO Buffer statue
+
+private static final int INVALIDATED = -2;
+
+private static final int UNMARKED = -1;
+
+private boolean markedSkipLF = false;
+
+
+
+# three component
+
+Buffer, Channel, Selector
+

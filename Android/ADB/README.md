@@ -10,7 +10,7 @@ adb nodaemon server
 ---
 + ```dumpsys activity```: Print activity information
 + ```dumpsys activity top``````
-+ ``````am stack```
++ ```am stack```
 ---
 + ```screencap -p filepath```:Caption the screen. You can use ```screencap -help``` for more information.
 + ```screenrecord```: Record the screen. ```screenrecord -help```for more information.
@@ -141,7 +141,9 @@ pm list permissions -d -g
 
 dumpsys activity services
 
-
+adb shell am start -a {action} -c {category} -n {package}/{activity}
+aapt dump xmltree Settings.apk AndroidManifest.xml > settings.txt
+adb shell am start -n com.android.settings/.Settings\$AdvancedWifiSettingsActivity
 
 
 
